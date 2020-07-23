@@ -1,3 +1,2 @@
-DATABASE_URL = ''
-
+DATABASE_URL = "sqlite:///./finance.db"
 DEBUG = True

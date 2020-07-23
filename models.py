@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Numeric, Integer, String
+from pydantic import BaseModel
 
 from database import Base
 
@@ -12,3 +13,7 @@ class Stock(Base):
     dividend = Column(Numeric(10, 2))
     ma50 = Column(Numeric(10, 2))
     ma200 = Column(Numeric(10, 2))
+
+
+class StockRequest(BaseModel):
+    symbol: str
